@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f2e24768c90648b16fc6986df7726, type: 3}
+  m_Name: Rock
+  m_EditorClassIdentifier: 
+  description: You awaken to find yourself laying on a rather uncomfortable rock.
+    Your head is pounding. You are pretty cold and your mouth is very dry. You have
+    no idea where you are, what time it is, how you got here or exactly who you are
+    at the moment. As best you can tell it is either dusk or dawn. The light is dim.
+  roomName: rock
+  exits:
+  - keyString: cave
+    exitDescription: Off to your left you see a dark void on a tall rock face. Probably
+      a cave you think to yourself.
+    valueRoom: {fileID: 11400000, guid: 7aeea3dfc2153b049b7f6ffa8824a92d, type: 2}
+  - keyString: forrest
+    exitDescription: In front of you there is what appears to be a fairly thick forrest.
+      You can not tell how far it goes but it looks pretty dark from here. There
+      is a path that looks as though it was made by animals.
+    valueRoom: {fileID: 11400000, guid: f8bcce1714cb6b74e8e23c21ee864b7a, type: 2}
+  - keyString: road
+    exitDescription: To the right is a small country road. It is paved but is badly
+      cracked. There does not seem to be a lot of maintenance that is done. There
+      are no street signs or traffic at the moment.
+    valueRoom: {fileID: 11400000, guid: 01303325dfdc28d4bb1eb46e907f8e93, type: 2}
+  - keyString: building
+    exitDescription: 'Behind you at the moment there is off in the distance what
+      appears to be a building of some sort. You can not see any markings or any
+      other identification on or around the buidling. You can not tell if there is
+      anyone there or not. You can not tell if it is a residence or a place of business. '
+    valueRoom: {fileID: 11400000, guid: 9795a60ca9f8ddd48ad9fabe38eb9e4f, type: 2}
+  interactableObjectsInRoom:
+  - {fileID: 11400000, guid: 9f8db364b24ef474a954d1065568c6a5, type: 2}

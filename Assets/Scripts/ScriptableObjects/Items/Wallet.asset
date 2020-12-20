@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e71700f8e7b7f840b36aa10059d1d6a, type: 3}
+  m_Name: Wallet
+  m_EditorClassIdentifier: 
+  noun: wallet
+  description: You see a wallet laying on the ground close to where your head was.
+  interactions:
+  - inputAction: {fileID: 11400000, guid: 7082abce77607c14abb1c941fa971360, type: 2}
+    textResponse: 'You open the wallet and see a Drivers License that has a photograph
+      of a man who''s name is Jason Oliver. That name does not ring a bell and as
+      you do not have a mirror you do not know if this is you or not. You look through
+      the rest of the wallet but there is nothing else. '
+    actionResponse: {fileID: 0}
+  - inputAction: {fileID: 11400000, guid: 46af30f6e511c014aba3122de64e6030, type: 2}
+    textResponse: 'You take the wallet just in case. '
+    actionResponse: {fileID: 0}

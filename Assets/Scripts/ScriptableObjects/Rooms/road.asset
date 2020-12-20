@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f2e24768c90648b16fc6986df7726, type: 3}
+  m_Name: road
+  m_EditorClassIdentifier: 
+  description: 'As you get near the road, you hear what you think is a car coming.
+    You have the urge back away and lay low until the car passes. You do not know
+    what to say to anyone and you do not trust anyone at the moment. '
+  roomName: road
+  exits: []
+  interactableObjectsInRoom: []
