@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f2e24768c90648b16fc6986df7726, type: 3}
+  m_Name: buidling_bay
+  m_EditorClassIdentifier: 
+  description: 'You are standing in a large open area full of very large machines.
+    You are not certain what they are doing, but there is a lot of fumes and heat
+    being generated. There is a table in the middle of the room that has a few items. '
+  roomName: bay
+  exits:
+  - keyString: hallway
+    exitDescription: You can go back out into the hallway
+    valueRoom: {fileID: 11400000, guid: 01cf51671d153164888fde4aa8c11546, type: 2}
+  interactableObjectsInRoom:
+  - {fileID: 11400000, guid: 61f9e6a13d4549840a45916ce5fd07b2, type: 2}
+  firstVisitText: 
+  isVisited: 0

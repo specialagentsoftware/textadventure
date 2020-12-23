@@ -16,5 +16,10 @@ MonoBehaviour:
     You have the urge back away and lay low until the car passes. You do not know
     what to say to anyone and you do not trust anyone at the moment. '
   roomName: road
-  exits: []
+  exits:
+  - keyString: rock
+    exitDescription: You see the rock you woke up on, in the distance
+    valueRoom: {fileID: 11400000, guid: 50035a477f41e874b9b9b7da526b1a2b, type: 2}
   interactableObjectsInRoom: []
+  firstVisitText: 
+  isVisited: 0

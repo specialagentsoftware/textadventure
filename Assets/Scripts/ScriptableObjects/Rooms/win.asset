@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f0f2e24768c90648b16fc6986df7726, type: 3}
-  m_Name: Lose
+  m_Name: win
   m_EditorClassIdentifier: 
-  description: 'You lift the branch up and bash yourself on the head. You do not
-    remember anything and your headache is worse. So much worse in fact you are now
-    dead. <color=red>Congrats, you lose!</color> Would you like to try again. Type
-    restart to start over or quit to end the game. '
-  roomName: lose
+  description: win placeholder
+  roomName: win
   exits: []
   interactableObjectsInRoom: []
+  firstVisitText: <color=yellow><size=50>You are safe!!</size></color>
+  isVisited: 0

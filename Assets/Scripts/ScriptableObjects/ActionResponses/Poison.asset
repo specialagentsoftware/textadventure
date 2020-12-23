@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7139aab2c8fc194abb499d333537caa, type: 3}
+  m_Name: Poison
+  m_EditorClassIdentifier: 
+  requiredString: '"-"'
+  roomToChangeTo: {fileID: 11400000, guid: 9c2847806425b1449ae104b3bf649b3e, type: 2}
+  requiredDescription: '"You decide to open and drink the water. The water feels
+    cool and refreshing. You had no idea how thirsty you were. All is well until
+    a few minutes later. Your throat begins to burn violently. You start having a
+    hard time breathing. As you frantically search around for something that will
+    help. You see some movement at the door of the kitchen. There is a dark figure
+    watching you flail around. They appear to be holding a cell phone. As you slump
+    to the floor you wonder if they are taking a video of your death and what they
+    could possibly use that for. You may restart the game by typing <color=yellow>
+    reset </color> or you may quit by typing <color=red>quit</color>'

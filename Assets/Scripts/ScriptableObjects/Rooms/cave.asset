@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f0f2e24768c90648b16fc6986df7726, type: 3}
   m_Name: cave
   m_EditorClassIdentifier: 
-  description: Walking toward the cave you see a flickering light dancing off the
-    walls. You can not hear anything or see any people. Just the wash of light around
-    a turn in the distance within the cave.
+  description: You are outside the cave.
   roomName: cave
   exits:
   - keyString: rock
     exitDescription: You see the rock you woke up on in the distance.
     valueRoom: {fileID: 11400000, guid: 50035a477f41e874b9b9b7da526b1a2b, type: 2}
-  interactableObjectsInRoom:
-  - {fileID: 11400000, guid: aa646c3c7fbd8ea4cb27b04b7d40aa6f, type: 2}
+  - keyString: inside
+    exitDescription: 'You can go inside of the cave easily. '
+    valueRoom: {fileID: 11400000, guid: bf4e3cf0658d31d42a0e5eff163c51b4, type: 2}
+  interactableObjectsInRoom: []
+  firstVisitText: You see a flickering light dancing off the walls. You can not hear
+    anything or see any people. Just the wash of light around a turn in the distance
+    within the cave.
+  isVisited: 0

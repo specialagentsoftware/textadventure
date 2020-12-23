@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class RoomNavigation : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Room currentRoom;
     GameController controller;
     Dictionary<string, Room> exitDictionary = new Dictionary<string, Room>();
+    public List<Room> roomList = new List<Room>();
 
     void Awake()
     {
@@ -25,11 +25,16 @@ public class RoomNavigation : MonoBehaviour
 
     public void AttemptToChangeRooms(string directionNoun)
     {
+        if(currentRoom.roomName.ToString() == "rock")
+        {
+            controller.AddRoomVisit();
+        }
+
         if (exitDictionary.ContainsKey(directionNoun))
         {
             currentRoom = exitDictionary[directionNoun];
-            controller.LogStringWithReturn("You head off to the " + directionNoun);
             controller.DisplayRoomText();
+            controller.AddRoomVisit();
         } else 
         {
             controller.LogStringWithReturn("There is no path to the " + directionNoun);
@@ -39,5 +44,23 @@ public class RoomNavigation : MonoBehaviour
     public void ClearExits()
     {
         exitDictionary.Clear();
+    }
+
+    public Room GetRoomByRoomName(string Name)
+    {
+        foreach (Room rm in roomList)
+        {
+            if(rm.roomName.ToString() == Name)
+            {
+                return rm;
+            }
+        }
+        return null;
+    }
+
+    public void ChangeToRoomNoExitRequired(Room roomToChangeTo)
+    {
+        currentRoom = roomToChangeTo;
+        controller.DisplayRoomText();
     }
 }

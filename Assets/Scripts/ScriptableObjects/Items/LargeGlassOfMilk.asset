@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e71700f8e7b7f840b36aa10059d1d6a, type: 3}
+  m_Name: LargeGlassOfMilk
+  m_EditorClassIdentifier: 
+  noun: milk
+  description: A large ice cold glass of milk is on the table.
+  interactions:
+  - inputAction: {fileID: 11400000, guid: 46af30f6e511c014aba3122de64e6030, type: 2}
+    textResponse: You have taken the milk. It looks very tasty. You are so thirsty.
+    actionResponse: {fileID: 0}
+  - inputAction: {fileID: 11400000, guid: c8fc2c87772169e47b70ae296460df1c, type: 2}
+    textResponse: 
+    actionResponse: {fileID: 11400000, guid: 80566dbb56156e14b98d15958ae6fd17, type: 2}
+  isUsed: 0

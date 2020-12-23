@@ -10,12 +10,16 @@ public class InteractableItems : MonoBehaviour
     public Dictionary<string, string> takeDictionary = new Dictionary<string, string>();
     GameController controller;
     public List<InteractableObject> usableItemList;
-
     Dictionary<string, ActionResponse> useDictionary = new Dictionary<string, ActionResponse>();
 
     void Awake()
     {
         controller = GetComponent<GameController>();
+    }
+
+    public void RemoveItemsFromInventory()
+    {
+        nounsInInventory.Clear();
     }
 
     public string GetObjectsNotInInventory(Room currentRoom, int i)
@@ -121,16 +125,28 @@ public class InteractableItems : MonoBehaviour
         if (separatedInputWords.Length > 1 && separatedInputWords[1] != string.Empty)
         {
             string nounToUse = separatedInputWords[1];
+            InteractableObject objectbeingused = GetInteractableObjectFromUsableList(nounToUse);
 
             if (nounsInInventory.Contains(nounToUse))
             {
                 if (useDictionary.ContainsKey(nounToUse))
                 {
-                    bool actionResult = useDictionary[nounToUse].DoActionResponse(controller);
-                    if (!actionResult)
+                    if(objectbeingused.isUsed == false)
                     {
-                        controller.LogStringWithReturn("HMM. Nothing Happens.");
+                        bool actionResult = useDictionary[nounToUse].DoActionResponse(controller);
+                        if (!actionResult)
+                        {
+                            controller.LogStringWithReturn("HMM. Nothing Happens.");
+                        }
+                        else
+                        {
+                            objectbeingused.isUsed = true;
+                        }
                     }
+                    else
+                    {
+                        controller.LogStringWithReturn(nounToUse + " has already been used");
+                    } 
                 }
                 else
                 {

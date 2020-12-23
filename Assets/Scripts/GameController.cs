@@ -9,19 +9,20 @@ public class GameController : MonoBehaviour
     [HideInInspector] public List<string> interactionDescriptionsInRoom = new List<string>();
     public InputAction[] inputActions;
     [HideInInspector] public InteractableItems interactableItems;
+    [HideInInspector] public List<string> roomsVisited;
+    public Dictionary<string, Room> roomDictionary = new Dictionary<string, Room>();
 
     List<string> actionLog = new List<string>();
     [TextArea]
     public Text displayText;
+    public Text LocationValue;
 
-    // Start is called before the first frame update
     void Awake()
     {
         interactableItems = GetComponent<InteractableItems>();
         roomNavigation = GetComponent<RoomNavigation>();
     }
 
-    // Update is called once per frame
     void Start()
     {
         DisplayRoomText();
@@ -30,6 +31,7 @@ public class GameController : MonoBehaviour
 
     public void DisplayLoggedText()
     {
+        LocationValue.text = roomNavigation.currentRoom.roomName.ToString();
         string logAsText = string.Join("\n", actionLog.ToArray());
         displayText.text = logAsText;
     }
@@ -102,7 +104,18 @@ public class GameController : MonoBehaviour
         ClearCollectionsforNewRoom();
         UnpackRoom();
         string joinedInteractionDescriptions = string.Join("\n\n", interactionDescriptionsInRoom.ToArray());
-        string combinedText = roomNavigation.currentRoom.description + "\n\n" + joinedInteractionDescriptions;
+        string specialFirstVisitText = roomNavigation.currentRoom.firstVisitText;
+        string combinedText;
+
+        if (!roomsVisited.Contains(roomNavigation.currentRoom.roomName.ToString())) 
+        {
+            combinedText = specialFirstVisitText +"\n\n" + roomNavigation.currentRoom.description + "\n\n" + joinedInteractionDescriptions;
+        }
+        else
+        {
+            combinedText = roomNavigation.currentRoom.description + "\n\n" + joinedInteractionDescriptions;
+        }
+        
         LogStringWithReturn(combinedText);
     }
 
@@ -153,5 +166,35 @@ public class GameController : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         Application.Quit();
+    }
+
+    public void AddRoomVisit()
+    {
+        if (!roomsVisited.Contains(roomNavigation.currentRoom.roomName.ToString()))
+        {
+            roomsVisited.Add(roomNavigation.currentRoom.roomName.ToString());
+        }
+    }
+
+    public void Reset()
+    {
+        Room roomToChangeTo = roomNavigation.GetRoomByRoomName("rock");
+        if(roomToChangeTo != null)
+        {
+            roomsVisited.Clear();
+            actionLog.Clear();
+            MarkUsableItemsUnused();
+            LogStringWithReturn("<color=#CD5C5C>Restarting</color>");
+            interactableItems.RemoveItemsFromInventory();
+            roomNavigation.ChangeToRoomNoExitRequired(roomToChangeTo);
+        }
+    }
+
+    public void MarkUsableItemsUnused()
+    {
+        foreach (InteractableObject obj in interactableItems.usableItemList)
+        {
+            obj.isUsed = false;
+        }
     }
 }

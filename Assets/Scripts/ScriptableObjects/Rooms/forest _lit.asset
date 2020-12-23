@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f0f2e24768c90648b16fc6986df7726, type: 3}
-  m_Name: building
+  m_Name: forest _lit
   m_EditorClassIdentifier: 
-  description: 'You carefully approach the building. There is some small faded ,
-    hard to see, signage on the front of the building. it says J & M Services. The
-    lights all appear to be off and the door is locked when you try it. You hear
-    some machinery running though. '
-  roomName: building
+  description: 'The forested area is now well lit. '
+  roomName: forest
   exits:
   - keyString: rock
-    exitDescription: The rock, where you woke up, can be seen in the distance.
+    exitDescription: You see the rock you woke up on in the distance.
     valueRoom: {fileID: 11400000, guid: 50035a477f41e874b9b9b7da526b1a2b, type: 2}
+  - keyString: path
+    exitDescription: With the lantern lit you can see the path much better. You can
+      now continue up the path if you chose.
+    valueRoom: {fileID: 11400000, guid: 84ff142c9a3d8d8489f2ae1460d00db2, type: 2}
   interactableObjectsInRoom: []
   firstVisitText: 
   isVisited: 0

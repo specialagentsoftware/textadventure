@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7139aab2c8fc194abb499d333537caa, type: 3}
+  m_Name: HideUnderRemains
+  m_EditorClassIdentifier: 
+  requiredString: '"-"'
+  roomToChangeTo: {fileID: 11400000, guid: 9c2847806425b1449ae104b3bf649b3e, type: 2}
+  requiredDescription: You do the disgusting work of lifting the remains just enough
+    to slide under them. You then try your best to control your breathing and your
+    heartbeat. Silently you wait, hoping that you were wrong and that the large mass
+    rusting around the area will go away. A pair of large red eyes slowly slide into
+    your view. The largest wolf you have ever seen is looking right down at you from
+    above the remains. A drip of hot saliva runs down your forehead. You think that
+    it is a shame that someone can die without even knowing who they are. You may
+    restart the game by typing <color=yellow> reset </color> or you may quit by typing
+    <color=red>quit</color>

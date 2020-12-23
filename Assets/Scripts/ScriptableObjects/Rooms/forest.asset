@@ -10,11 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f0f2e24768c90648b16fc6986df7726, type: 3}
-  m_Name: forrest
+  m_Name: forest
   m_EditorClassIdentifier: 
   description: 'Upon further examination you find that there is a small poorly serviced
     fence in the front of the forrested area. It has been rode over in front of the
     animal path you saw earlier. There are assorted forrest noises as you get near. '
-  roomName: forrest
-  exits: []
+  roomName: forest
+  exits:
+  - keyString: rock
+    exitDescription: You see the rock you woke up on in the distance.
+    valueRoom: {fileID: 11400000, guid: 50035a477f41e874b9b9b7da526b1a2b, type: 2}
+  - keyString: path
+    exitDescription: You step closer to the path. It is pitch black just inside the
+      small clearing. You could easily fit into the path. You are worried about the
+      darkness.
+    valueRoom: {fileID: 11400000, guid: 6c3bf1325fd2ed24aa9f12e52d3ff3f4, type: 2}
   interactableObjectsInRoom: []
+  firstVisitText: 
+  isVisited: 0

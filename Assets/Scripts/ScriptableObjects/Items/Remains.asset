@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e71700f8e7b7f840b36aa10059d1d6a, type: 3}
+  m_Name: Remains
+  m_EditorClassIdentifier: 
+  noun: remains
+  description: It is very dark, but after a long walk, you stumple upon what you
+    think are possibly the remains of a large dog. It is cold to the touch and all
+    of the blood has been licked up. You can see a gash along the neck that is wide
+    open. You just now noticed that you are absolutely lost. You can't see much farther
+    than a foot in front of you at the moment. No sooner had you thought about that,
+    you hear the snapping of twigs and see a short flash of red, with what you think
+    is movement.
+  interactions:
+  - inputAction: {fileID: 11400000, guid: 7082abce77607c14abb1c941fa971360, type: 2}
+    textResponse: Those remains look like they are big enough to hide you.
+    actionResponse: {fileID: 0}
+  - inputAction: {fileID: 11400000, guid: 46af30f6e511c014aba3122de64e6030, type: 2}
+    textResponse: You grab the remains, preparing to use them for cover.
+    actionResponse: {fileID: 0}
+  - inputAction: {fileID: 11400000, guid: c8fc2c87772169e47b70ae296460df1c, type: 2}
+    textResponse: 
+    actionResponse: {fileID: 11400000, guid: 80fbab205e326ed478e29c88478e300d, type: 2}
+  isUsed: 0

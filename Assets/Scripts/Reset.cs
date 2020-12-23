@@ -2,27 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "TextAdventure/InputActions/Go")]
-public class Go : InputAction
+[CreateAssetMenu(menuName = "TextAdventure/InputActions/Reset")]
+public class Reset : InputAction
 {
-
     public override void RespondToInput(GameController controller, string[] separatedInputWords)
     {
-        if(ValidateInputBeforeAction(controller,separatedInputWords))
-        {
-            controller.roomNavigation.AttemptToChangeRooms(separatedInputWords[1]);
-        } 
-        else
-        {
-            controller.LogStringWithReturn("<color=#CD5C5C>Go command must be followed by an object");
-        }
+        controller.Reset();
     }
 
     public override bool ValidateInputBeforeAction(GameController controller, string[] separatedInputWords)
     {
-        if(separatedInputWords.Length > 1)
+        if (separatedInputWords.Length > 1)
         {
-            if (separatedInputWords[1] != string.Empty){
+            if (separatedInputWords[1] != string.Empty)
+            {
                 return true;
             }
             else

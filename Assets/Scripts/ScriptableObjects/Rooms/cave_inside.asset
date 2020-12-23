@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f2e24768c90648b16fc6986df7726, type: 3}
+  m_Name: cave_inside
+  m_EditorClassIdentifier: 
+  description: You carefully enter the cave. When you walk around the turn in the
+    cave, you see a crumpled mat in the corner, a small fire, and no other signs
+    of life.
+  roomName: cave_inside
+  exits:
+  - keyString: outside
+    exitDescription: You can leave the cave just as easily as you entered.
+    valueRoom: {fileID: 11400000, guid: 7aeea3dfc2153b049b7f6ffa8824a92d, type: 2}
+  interactableObjectsInRoom:
+  - {fileID: 11400000, guid: 849643bb7228a6e489ad2701de4f1e2a, type: 2}
+  firstVisitText: 
+  isVisited: 0

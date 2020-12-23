@@ -10,17 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e71700f8e7b7f840b36aa10059d1d6a, type: 3}
-  m_Name: Branch
+  m_Name: Key
   m_EditorClassIdentifier: 
-  noun: branch
-  description: You see a branch laying on the ground.
+  noun: key
+  description: There is an rusty key laying on the ground next to a pile of old dirty
+    clothes.
   interactions:
   - inputAction: {fileID: 11400000, guid: 7082abce77607c14abb1c941fa971360, type: 2}
-    textResponse: 'Just as you expected.. it is made of wood. '
+    textResponse: 'Upon closer inspection, you can faintly make out engraved writing
+      on the key. It says J & M Services. '
+    actionResponse: {fileID: 0}
+  - inputAction: {fileID: 11400000, guid: 46af30f6e511c014aba3122de64e6030, type: 2}
+    textResponse: You pick up the Key. It might be useful elsewhere.
     actionResponse: {fileID: 0}
   - inputAction: {fileID: 11400000, guid: c8fc2c87772169e47b70ae296460df1c, type: 2}
-    textResponse: 
-    actionResponse: {fileID: 11400000, guid: 0f9137912fbfdcb419ef714849856191, type: 2}
-  - inputAction: {fileID: 11400000, guid: 46af30f6e511c014aba3122de64e6030, type: 2}
-    textResponse: 'You take the branch. '
-    actionResponse: {fileID: 0}
+    textResponse: You use the key.
+    actionResponse: {fileID: 11400000, guid: 3b3f352748665f842af68cc0b91e02a7, type: 2}
+  isUsed: 0

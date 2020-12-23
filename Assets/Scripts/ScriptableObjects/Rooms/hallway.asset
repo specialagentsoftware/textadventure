@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0f2e24768c90648b16fc6986df7726, type: 3}
+  m_Name: hallway
+  m_EditorClassIdentifier: 
+  description: You go into the hallway. You can see a little bit from the light outside.
+    There is a sound of machinery coming from the left of you.
+  roomName: hallway
+  exits:
+  - keyString: outside
+    exitDescription: You can walk back outside.
+    valueRoom: {fileID: 11400000, guid: 1009a87228930a94992f1d6aa2d4539a, type: 2}
+  - keyString: bay
+    exitDescription: 'You see to the left the opening for a bay. There are heavy
+      sheets of plastic that are hanging over the opening. Probably to keep sound
+      and particles from the machines from getting out here into the othe areas. '
+    valueRoom: {fileID: 11400000, guid: 9fae2093ccaab844fa90bc7e99019090, type: 2}
+  - keyString: kitchen
+    exitDescription: You see what you think is a kitchen to your right.
+    valueRoom: {fileID: 11400000, guid: 04da279dd0faa444795c21a42983aab6, type: 2}
+  interactableObjectsInRoom: []
+  firstVisitText: 
+  isVisited: 0
