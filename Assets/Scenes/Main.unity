@@ -1042,6 +1042,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 01303325dfdc28d4bb1eb46e907f8e93, type: 2}
   - {fileID: 11400000, guid: 50035a477f41e874b9b9b7da526b1a2b, type: 2}
   - {fileID: 11400000, guid: 212feda996491214187c254d4ecb12d0, type: 2}
+  enemies:
+  - Wolves
+  - Traveling Salesmen
+  - Wild Dogs
+  - Sloths
+  - Kindergarden Students
+  - Small piles of strings
+  - Rogue Comma's
+  - Millard Fillmore
 --- !u!114 &1621506852
 MonoBehaviour:
   m_ObjectHideFlags: 0

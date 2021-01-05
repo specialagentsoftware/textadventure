@@ -10,11 +10,18 @@ public class Go : InputAction
     {
         if(ValidateInputBeforeAction(controller,separatedInputWords))
         {
-            controller.roomNavigation.AttemptToChangeRooms(separatedInputWords[1]);
+            if (controller.roomNavigation.IsMoveInterrupted())
+            {
+                controller.roomNavigation.PresentCombat(controller,separatedInputWords);
+            }
+            else
+            {
+                controller.roomNavigation.AttemptToChangeRooms(separatedInputWords[1]);
+            }
         } 
         else
         {
-            controller.LogStringWithReturn("<color=#CD5C5C>Go command must be followed by an object");
+            controller.LogStringWithReturn("<color=#CD5C5C>Go command must be followed by an object</color>");
         }
     }
 

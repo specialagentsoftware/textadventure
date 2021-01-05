@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class RoomNavigation : MonoBehaviour
 {
     public Room currentRoom;
     GameController controller;
     Dictionary<string, Room> exitDictionary = new Dictionary<string, Room>();
     public List<Room> roomList = new List<Room>();
+    public List<string> enemies;
 
     void Awake()
     {
@@ -63,4 +65,34 @@ public class RoomNavigation : MonoBehaviour
         currentRoom = roomToChangeTo;
         controller.DisplayRoomText();
     }
+
+    public bool IsMoveInterrupted()
+    {
+            var rand = Random.Range(1,100);
+            return rand < 18;
+    }
+
+    public bool IsSurvivable()
+    {
+        var rand = Random.Range(1, 100);
+        return rand < 68;
+    }
+
+    public void PresentCombat(GameController controller,string[] separatedInputWords)
+    {
+        controller.LogStringWithReturn("<color=red>While moving from " + controller.roomNavigation.currentRoom.name + " to " + separatedInputWords[1] + " you were attacked by " + enemies[Random.Range(0,enemies.Count)] + "</color>");
+
+        if (IsSurvivable())
+        {
+            controller.LogStringWithReturn("<color=white>You survived, and can continue on to the " + separatedInputWords[1] + "</Color>");
+            AttemptToChangeRooms(separatedInputWords[1]);
+        }
+        else
+        {
+            controller.LogStringWithReturn("<color=red> You died in the attack.</color>");
+            controller.LogStringWithReturn("use reset or quit");
+        }
+    }
+
+
 }
