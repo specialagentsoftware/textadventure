@@ -89,8 +89,9 @@ public class RoomNavigation : MonoBehaviour
         }
         else
         {
-            controller.LogStringWithReturn("<color=red> You died in the attack.</color>");
-            controller.LogStringWithReturn("use reset or quit");
+            Room loseRoom = GetRoomByRoomName("loss");
+            loseRoom.description = "You died in combat.\n You may restart the game by typing <color=yellow> reset </color> or you may quit by typing <color=red>quit</color>";
+            ChangeToRoomNoExitRequired(loseRoom);
         }
     }
 

@@ -46,6 +46,11 @@ public class GameController : MonoBehaviour
         {
             actionLog.Add(stringToAdd + "\n");
         }
+
+        //if(actionLog.Count == 11)
+        //{
+        //    actionLog.RemoveRange(0, 4);
+        //}
         
     }
 
